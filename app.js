@@ -1,7 +1,7 @@
 // Code goes here
 var app = angular.module('myApp', []);
 
-app.controller('PosController', function ($scope) {
+app.controller('PosController',["ProductService", function ($scope,ProductService) {
 
     $scope.drinks = [{
         id: 0,
@@ -165,4 +165,4 @@ app.controller('PosController', function ($scope) {
         }
     };
 
-});
+}]);
