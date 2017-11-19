@@ -1,7 +1,7 @@
 // Code goes here
 var app = angular.module('myApp', []);
 
-app.controller('PosController',["ProductService", function ($scope,ProductService) {
+app.controller('PosController',["$scope","ProductService", function ($scope,ProductService) {
 
     $scope.drinks = [{
         id: 0,
