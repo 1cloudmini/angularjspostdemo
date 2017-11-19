@@ -1,5 +1,5 @@
 var ProductService="ProductService";
-angular.module("app").service(ProductService,["http",function($http){
+angular.module("myApp").service(ProductService,["$http",function($http){
    console.log(ProductService);
 
 }]);
