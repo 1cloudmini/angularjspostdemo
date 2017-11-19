@@ -1,5 +1,5 @@
 
-angular.module("myApp").directive("productDirective",[function(){
+angular.module("myApp").directive("productDirective",["$compile",function($compile){
 return{
   restrict:"A",
   scope:{},
