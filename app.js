@@ -83,12 +83,12 @@ app.controller('PosController',["$scope","ProductService", function ($scope,Prod
 
     $scope.addNewItem = function (item) {
         if (item.category === "Drinks") {
-            item.id = $scope.drinks.length + $scope.foods.length
-            $scope.drinks.push(item)
+            item.id = $scope.drinks.product.length + $scope.foods.length
+            $scope.drinks.product.push(item)
             $scope.new = []
             $('#myTab a[href="#drink"]').tab('show')
         } else if (item.category === "Foods") {
-            item.id = $scope.drinks.length + $scope.foods.length
+            item.id = $scope.drinks.product.length + $scope.foods.length
             $scope.foods.push(item)
             $scope.new = []
             $('#myTab a[href="#food"]').tab('show')
