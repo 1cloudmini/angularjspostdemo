@@ -1,5 +1,5 @@
 
-angular.module("myApp").service("ProductService",["$http",function($http){
+angular.module("myApp").factory("ProductService",["$http",function($http){
    console.log("ProductService");
   return {product:[{
         id: 0,
