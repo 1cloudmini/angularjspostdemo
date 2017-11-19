@@ -1,6 +1,6 @@
-var ProductService="ProductService";
-angular.module("myApp").service(ProductService,["$http",function($http){
-   console.log(ProductService);
+
+angular.module("myApp").service("ProductService",["$http",function($http){
+   console.log("ProductService");
   return {product:[{
         id: 0,
         name: "Still Water",
