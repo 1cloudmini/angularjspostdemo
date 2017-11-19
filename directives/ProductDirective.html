@@ -1,0 +1,45 @@
+<div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-body">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+<li class="active" role="presentation"><a data-toggle="tab" href="https://draft.blogger.com/blogger.g?blogID=1508904324263507635#drink" role="tab">Drinks</a></li>
+<li role="presentation"><a data-toggle="tab" href="https://draft.blogger.com/blogger.g?blogID=1508904324263507635#food" role="tab">Food</a></li>
+<li role="presentation"><a data-toggle="tab" href="https://draft.blogger.com/blogger.g?blogID=1508904324263507635#new" role="tab">New Item</a></li>
+</ul>
+<div class="tab-content">
+                            <div class="tab-pane active" id="drink" role="tabpanel">
+                                <button class="btn btn-primary btn-pos btn-marginTop" data-ng-bind="item.name" data-ng-click="addToOrder(item,1)" data-ng-repeat="item in drinks.product"></button>
+                            </div>
+<div class="tab-pane" id="food" role="tabpanel">
+                                <button class="btn btn-warning btn-pos btn-marginTop" data-ng-bind="item.name" data-ng-click="addToOrder(item,1)" data-ng-repeat="item in foods"></button>
+                            </div>
+<div class="tab-pane" id="new" role="tabpanel">
+                                <br />
+                                <form class="form" name="formCreate" novalidate="">
+                                    <div class="col-md-4">
+                                        <label>Name*</label>
+                                        <input class="form-control" data-ng-model="new.name" required="" type="text" />
+                                    </div>
+<div class="col-md-3">
+                                        <label>Price*</label>
+                                        <input class="form-control" data-ng-model="new.price" required="" type="number" />
+                                    </div>
+<div class="col-md-3">
+                                        <label>Category*</label>
+                                        <select class="form-control" data-ng-model="new.category" required="">
+                                            <option>Drinks</option>
+                                            <option>Foods</option>
+                                        </select>
+                                    </div>
+<div class="col-md-1">
+                                        <br />
+                                        <button class="btn btn-default btn-marginTop" data-ng-click="addNewItem(new)" data-ng-disabled="formCreate.$invalid">Add</button>
+                                    </div>
+</form>
+</div>
+</div>
+</div>
+<div class="panel-footer">
+</div>
+</div>
+</div>
