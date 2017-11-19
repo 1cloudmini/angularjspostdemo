@@ -5,6 +5,8 @@ return{
   scope:{},
   templateUrl:"../directives/ProductDirective.html",
   link:function(scope,element,attr){ 
+      var content = $compile(element)(scope);
+            element.append(content);
   }
 };
 }]);
