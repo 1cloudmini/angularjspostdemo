@@ -41,7 +41,7 @@ angular.module("myApp").factory("ProductService",["$http",function($http){
         name: "Orange Juice",
         price: "1.90",
     }],
-          foods = [{
+          foods : [{
         id: 8,
         name: "Waffle",
         price: "1.50",
