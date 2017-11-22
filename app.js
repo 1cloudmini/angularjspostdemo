@@ -1,6 +1,6 @@
 // Code goes here
 var app = angular.module('myApp', []);
-
+app.constant('API_URI', 'https://script.google.com/macros/s/AKfycbwm2SdGaU8C8RqzSrKcbrr9yypO7zGmaYTvnv1EEmhWU3fGPrE/exec');
 app.controller('PosController',["$scope","ProductService", function ($scope,ProductService) {
 
     $scope.drinks = ProductService;
