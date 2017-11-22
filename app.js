@@ -2,8 +2,16 @@
 var app = angular.module('myApp', []);
 app.constant('API_URI', 'https://script.google.com/macros/s/AKfycbwm2SdGaU8C8RqzSrKcbrr9yypO7zGmaYTvnv1EEmhWU3fGPrE/exec');
 app.controller('PosController',["$scope","ProductService", function ($scope,ProductService) {
-
-    $scope.drinks = ProductService;
+    function init(){
+     var filterText={"textFilter":"","isActive":true,"maxResult":10,"skip":1}
+    ProductService.getList(filterText).then(function(data){
+     console.log(data);
+        debugger;
+           $scope.drinks=data;
+    }); 
+    }
+    init();
+   // $scope.drinks = ProductService;
 
     $scope.order = [];
     $scope.new = {};
