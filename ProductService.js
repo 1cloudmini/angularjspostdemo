@@ -4,11 +4,13 @@ angular.module("myApp").factory("ProductService",["$http","API_URI",function($ht
   
    return  {
                 getList:function(paramter){
-                
+                    var para=angular.extend(parameter,{
+                      service:"product",
+                        crud:"list"});
                      return $http({
                              url: apiUrl, 
                              method: "GET",
-                             data: paramter
+                             data: para
                             });
                 }
           };
