@@ -10,7 +10,7 @@ app.controller('PosController',["$scope","ProductService", function ($scope,Prod
      };
     ProductService.getList(filterText).then(function(data){
      console.log(data);
-           $scope.drinks=data;
+           $scope.drinks=data.items;
     }); 
     }
     init();
