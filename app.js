@@ -6,7 +6,7 @@ app.controller('PosController',["$scope","ProductService", function ($scope,Prod
      var filterText={
         service:"product",
         crud:"list",
-        filter:{textFilter:"",isActive:"true",maxResult:10,skip:1}
+        filter:{textFilter:"",isActive:true,maxResult:10,skip:1}
      };
     ProductService.getList(filterText).then(function(data){
      console.log(data);
