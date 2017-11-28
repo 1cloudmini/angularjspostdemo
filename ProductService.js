@@ -4,7 +4,7 @@ angular.module("myApp").factory("ProductService",["$http","API_URI",function($ht
   
    return  {
                 getList:function(paramter){
-                  var z = 'code='+1;
+                  var z = 'code=khmer&name=english';
                      return $http({
                              url: apiUrl, 
                              method: "GET",
