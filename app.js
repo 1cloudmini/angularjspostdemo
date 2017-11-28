@@ -8,9 +8,9 @@ app.controller('PosController',["$scope","ProductService", function ($scope,Prod
         crud:"list",
         filter:{textFilter:"",isActive:true,maxResult:10,skip:1}
      };
-    ProductService.getList(filterText).then(function(data){
-     console.log(data);
-           $scope.drinks=data.items;
+    ProductService.getList(filterText).then(function(result){
+     console.log(result.data.items);
+           $scope.drinks=result.data.items;
     }); 
     }
     init();
