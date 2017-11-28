@@ -4,11 +4,13 @@ angular.module("myApp").factory("ProductService",["$http","API_URI",function($ht
   
    return  {
                 getList:function(paramter){
-                  var z = 'code=khmer&name=english';
                      return $http({
                              url: apiUrl, 
                              method: "GET",
-                             data:z
+                             params:{
+                                   id:1,
+                                   name:'khmer',
+                             }
                             });
                 }
           };
