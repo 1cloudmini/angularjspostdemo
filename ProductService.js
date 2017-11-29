@@ -9,8 +9,8 @@ angular.module("myApp").factory("ProductService",["$http","API_URI",function($ht
                         crud:"list"});
                      return $http({
                              url: apiUrl, 
-                             method: "GET",
-                             data:paramter
+                             method: "Get",
+                             data:{service:'product',crud:'list',textFilter:'',isActive:true,maxResult:10,skip:1}
                             });
                 }
           };
