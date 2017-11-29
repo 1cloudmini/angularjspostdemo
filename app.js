@@ -4,8 +4,9 @@ app.constant('API_URI', 'https://script.google.com/macros/s/AKfycbwm2SdGaU8C8Rqz
 app.controller('PosController',["$scope","ProductService", function ($scope,ProductService) {
     function init(){
      var filterText={
-         "service":"product","crud":"list",
-         "filter":{"textFilter":"","isActive":true,"maxResult":10,"skip":1}
+        service:"product",
+        crud:"list",
+        filter:{textFilter:"",isActive:"true",maxResult:10,skip:1}
      };
     ProductService.getList(filterText).then(function(data){
      console.log(data);
