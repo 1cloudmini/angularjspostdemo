@@ -10,7 +10,7 @@ angular.module("myApp").factory("ProductService",["$http","API_URI",function($ht
                      return $http({
                              url: apiUrl, 
                              method: "Get",
-                             data:{service:'product',crud:'list',textFilter:'',isActive:true,maxResult:10,skip:1}
+                             data:{service:'product',crud:'list',filter:{textFilter:'',isActive:true,maxResult:10,skip:1}}
                             });
                 }
           };
