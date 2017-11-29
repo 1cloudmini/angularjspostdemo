@@ -10,7 +10,7 @@ angular.module("myApp").factory("ProductService",["$http","API_URI",function($ht
                      return $http({
                              url: apiUrl, 
                              method: "GET",
-                             data: para
+                             data:paramter
                             });
                 }
           };
